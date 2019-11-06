@@ -1,0 +1,24 @@
+{
+  "name": "week2-CEFG-To-do",
+  "version": "1.0.0",
+  "description": "Create a to-do app",
+  "main": "dom.js",
+  "scripts": {
+    "test": "tape test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac18/week2-CEFG-To-do.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac18/week2-CEFG-To-do/issues"
+  },
+  "homepage": "https://github.com/fac18/week2-CEFG-To-do#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  }
+}
