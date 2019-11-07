@@ -18,7 +18,7 @@ var todoFunctions = {
   //cloneArrayOfObjects will create a copy of the todos array 
   //changes to the new array don't affect the original
   cloneArrayOfObjects: function(todos) {
-    return todos.map(function(todo){
+    return todos.map(function(todo){ 
       return JSON.parse(JSON.stringify(todo));
     });
   },
@@ -36,11 +36,28 @@ var todoFunctions = {
     },
 
   deleteTodo: function(todos, idToDelete) {
+    var newArray = todoFunctions.cloneArrayOfObjects(todos);
+    console.log(newArray);
+    for (var i=0; i<newArray.length; i++) {
+      if (newArray[i].id == idToDelete) {
+        newArray.splice(i, 1)
+      }
+    }
+    return newArray;
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
   },
   markTodo: function(todos, idToMark) {
+    var newArray = todoFunctions.cloneArrayOfObjects(todos);
+    var x = todos.map(function(e) {return e.id}).indexOf(idToMark);
+    if (todos[x].done == false) {
+      todos[x].done == true;
+    }
+    else if (todos[x].done == true) {
+      todos[x].done == false;
+    }
+
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
@@ -53,8 +70,6 @@ var todoFunctions = {
     // hint: array.slice, array.sort
   },
 };
-
-
 
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
