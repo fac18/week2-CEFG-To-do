@@ -18,7 +18,7 @@ var todoFunctions = {
   //cloneArrayOfObjects will create a copy of the todos array 
   //changes to the new array don't affect the original
   cloneArrayOfObjects: function(todos) {
-    return todos.map(function(todo){
+    return todos.map(function(todo){ 
       return JSON.parse(JSON.stringify(todo));
     });
   },
@@ -30,6 +30,14 @@ var todoFunctions = {
     // hint: array.concat
   },
   deleteTodo: function(todos, idToDelete) {
+    var newArray = todoFunctions.cloneArrayOfObjects(todos);
+    console.log(newArray);
+    for (var i=0; i<newArray.length; i++) {
+      if (newArray[i].id == idToDelete) {
+        newArray.splice(i, 1)
+      }
+    }
+    return newArray;
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
@@ -47,7 +55,6 @@ var todoFunctions = {
     // hint: array.slice, array.sort
   },
 };
-
 
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
