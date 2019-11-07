@@ -24,11 +24,17 @@ var todoFunctions = {
   },
   
   addTodo: function(todos, newTodo) {
-    // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-    // returns a new array, it should contain todos with the newTodo added to the end.
-    // add an id to the newTodo. You can use the generateId function to create an id.
-    // hint: array.concat
-  },
+    let todoCopy = this.cloneArrayOfObjects(todos);
+    var newObject = new Object();
+    newObject.id = 1;
+    //this.generateId();
+    newObject.description = newTodo;
+    newObject.done = false;
+    console.log(newObject);
+    console.log(todoCopy);
+    return todoCopy.concat(newObject);
+    },
+
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
@@ -49,10 +55,13 @@ var todoFunctions = {
 };
 
 
+
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
 // See this article for more details: 
 // http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
-if (typeof module !== 'undefined') {
+/*if (typeof module !== 'undefined') {
   module.exports = todoFunctions;
-}
+}*/
+
+module.exports = todoFunctions;
