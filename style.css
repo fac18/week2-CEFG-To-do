@@ -1,3 +1,57 @@
 .completed {
     text-decoration: line-through;
 }
+
+body {
+    background: url(https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: whitesmoke solid 0.1rem;
+    position: absolute;
+    top: 20vh;
+    padding: 0 5rem;
+    border-radius: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    /*font-family: 'Satisfy', cursive;
+    */
+    font-family: 'Abril Fatface', cursive;
+    text-decoration: underline;
+    color:rgba(128, 0, 0, 0.7);
+}
+
+#todo-container {
+    font-family: 'Satisfy', cursive;
+}
+
+#add-todo {
+    display: flex;
+    flex-direction: row;
+    /*border: black solid 3px;*/
+}
+
+#itemToAdd {
+    width: 15rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    border: rgba(0, 0, 0, 0.7) solid 0.1rem;
+}
+
+#addButton {
+    text-transform: lowercase;
+    font-family: 'Satisfy', cursive;
+    border-radius: 5rem;
+    border-style: none;
+    background-color: rgba(128, 0, 0, 0.3);
+}
+
