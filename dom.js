@@ -18,6 +18,9 @@
     // you will need to use addEventListener
 
     // add span holding description
+    var todoText = document.createElement('span');
+      todoText.textContent = todo.description;
+      todoNode.appendChild(todoText);
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
@@ -28,17 +31,32 @@
     todoNode.appendChild(deleteButtonNode);
 
     // add markTodo button
-    var markButtonNode = document.createElement('button');
-    markButtonNode.addEventListener('click', function(event) {
+    var markTodoButtonNode = document.createElement("button");
+    markTodoButtonNode.setAttribute("class", "mark-button");
+    if (todo.done == false) {
+      markTodoButtonNode.setAttribute("style", "background-color: #2f537d;");
+      todoNode.setAttribute('style', 'opacity: 1;');
+    }
+    if (todo.done == true) {
+      markTodoButtonNode.innerText = "✔";
+      markTodoButtonNode.setAttribute("style", "background-color: green;");
+      todoNode.setAttribute('style', 'opacity: 0.7;');
+    }
+    markTodoButtonNode.addEventListener("click", function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
-      if (todo.done == false) {
-        todoNode.classList.add("completed")
-      } else {
-        todoNode.classList.remove("completed")
-      }
     });
-    todoNode.appendChild(markButtonNode);
+    todoNode.appendChild(markTodoButtonNode);
+    // markButtonNode.addEventListener('click', function(event) {
+    //   var newState = todoFunctions.markTodo(state, todo.id);
+    //   update(newState);
+    //   if (todo.done == false) {
+    //     todoNode.classList.add("completed")
+    //   } else {
+    //     todoNode.classList.remove("completed")
+    //   }
+    // });
+    // todoNode.appendChild(markButtonNode);
 
     // add classes for css
 
@@ -51,11 +69,13 @@
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
       // what is inside event.target?
+       event.preventDefault();
+          var description = event.target.querySelector("input").value;
 
-      var description = '?'; // event.target ....
+      //var description = '?' // event.target ....
 
       // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      var newState = todoFunctions.addTodo(state, description); // ?? change this!
       update(newState);
     });
   }
