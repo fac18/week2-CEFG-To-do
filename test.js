@@ -85,14 +85,18 @@ var markToDoOutput = [
   },
 ]; 
 
+// test('test done property has been changed', function(t) {
+//   var x = toDoInput.map(function(e) {return e.id}).indexOf(5);
+//   var actual = toDoInput[x].done;
+//   var expected = markToDoOutput[x].done;
+//   t.notEqual(actual, expected, 'test done property has been changed');
+//   t.end();
+// }); 
+
 test('test done property has been changed', function(t) {
-  var actual = logic.deleteTodo(toDoInput, 3);
-  var x = toDoInput.map(function(e) {return e.id}).indexOf(3);
-  var bool = toDoInput[x].done;
-  console.log(x);
-  console.log(bool);
-  var expected = marktoDoOutput;
-  t.deepEqual(actual, expected, 'test done property has been changed');
+  var actual = toDoInput[0].done;
+  var expected = markToDoOutput[0].done;
+  t.notEqual(actual, expected, 'test done property has been changed');
   t.end();
 }); 
 

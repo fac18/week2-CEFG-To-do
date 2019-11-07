@@ -49,6 +49,15 @@ var todoFunctions = {
     // hint: array.filter
   },
   markTodo: function(todos, idToMark) {
+    var newArray = todoFunctions.cloneArrayOfObjects(todos);
+    var x = todos.map(function(e) {return e.id}).indexOf(idToMark);
+    if (todos[x].done == false) {
+      todos[x].done == true;
+    }
+    else if (todos[x].done == true) {
+      todos[x].done == false;
+    }
+
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
@@ -62,11 +71,6 @@ var todoFunctions = {
   },
 };
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 // Why is this if statement necessary?
 // The answer has something to do with needing to run code both in the browser and in Node.js
 // See this article for more details: 
