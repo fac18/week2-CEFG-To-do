@@ -60,5 +60,6 @@ button {
     height: 1.4rem;
     width: 1.4rem;
     margin: 0.5em;
+    float: right;
 }
 
