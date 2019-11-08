@@ -37,13 +37,14 @@
     var markTodoButtonNode = document.createElement("button");
     markTodoButtonNode.setAttribute("class", "mark-button");
     markTodoButtonNode.setAttribute("aria-label", "complete button");
-    if (todo.done === false) {
-      markTodoButtonNode.setAttribute("style", "background-color: #003366;");
+    if (todo.done == false) {
+      markTodoButtonNode.innerText = "✔";
+      markTodoButtonNode.setAttribute("style", "background-color: grey; color:white;");
       todoNode.setAttribute('style', 'opacity: 1;');
     }
     if (todo.done === true) {
       markTodoButtonNode.innerText = "✔";
-      markTodoButtonNode.setAttribute("style", "background-color: green;");
+      markTodoButtonNode.setAttribute("style", "background-color: #3CB371;");
       todoNode.setAttribute('style', 'opacity: 0.5;');
       todoText.setAttribute("style", "text-decoration: line-through;")
     }
@@ -72,6 +73,7 @@
       // hint: todoFunctions.addTodo
       var newState = todoFunctions.addTodo(state, description); // ?? change this!
       update(newState);
+      document.getElementById("itemToAdd").value = "";
     });
   }
 
