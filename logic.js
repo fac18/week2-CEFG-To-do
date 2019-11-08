@@ -42,14 +42,7 @@ var todoFunctions = {
     // hint: array.filter
   },
     
-    // var newArray = todoFunctions.cloneArrayOfObjects(todos);
-    // console.log(newArray);
-    // for (var i=0; i<newArray.length; i++) {
-    //   if (newArray[i].id == idToDelete) {
-    //     newArray.splice(i, 1)
-    //   }
     
-
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter

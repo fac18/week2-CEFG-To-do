@@ -2,26 +2,25 @@ var test = require('tape');
 var logic = require('./logic');
 
 var todos = [];
-// var newTodo = 'make tea';
 
 test('Example test', function(t) {
   t.pass();
   t.end();
 });
 
-// test('Testing if input argument is unchanged', function(t) {
-//   var actual = (logic.deleteTodo([{id: 3},{id: 5}], 3));
-//   var expected = ([{id: 3},{id: 5}]);
-//   t.equal(actual, expected, 'Should return todos when given todos');
-//   t.end();
-// });
+ test('Testing if input argument is unchanged', function(t) {
+   var actual = (logic.deleteTodo([{id: 3},{id: 5}], 3));
+   var expected = ([{id: 3},{id: 5}]);
+   t.equal(actual, expected, 'Should return todos when given todos');
+   t.end();
+ });
 
-// test('Testing if input argument is unchanged', function(t) {
-//   var actual = (logic.deleteTodo(["a", "b"]).join());
-//   var expected = (["a", "b"]).join();
-//   t.equal(actual, expected, 'Should return todos when given todos');
-//   t.end();
-// });
+ test('Testing if input argument is unchanged', function(t) {
+   var actual = (logic.deleteTodo(["a", "b"]).join());
+   var expected = (["a", "b"]).join();
+   t.equal(actual, expected, 'Should return todos when given todos');
+   t.end();
+ });
 
 test('Testing new array does not contain idTODelete', function(t) {
   var actual = ((logic.deleteTodo([{id: 3},{id: 5}], 3))).join();
@@ -85,13 +84,13 @@ var markToDoOutput = [
   },
 ]; 
 
-// test('test done property has been changed', function(t) {
-//   var x = toDoInput.map(function(e) {return e.id}).indexOf(5);
-//   var actual = toDoInput[x].done;
-//   var expected = markToDoOutput[x].done;
-//   t.notEqual(actual, expected, 'test done property has been changed');
-//   t.end();
-// }); 
+ test('test done property has been changed', function(t) {
+   var x = toDoInput.map(function(e) {return e.id}).indexOf(5);
+   var actual = toDoInput[x].done;
+   var expected = markToDoOutput[x].done;
+   t.notEqual(actual, expected, 'test done property has been changed');
+   t.end();
+ }); 
 
 test('test done property has been changed', function(t) {
   var actual = toDoInput[0].done;
@@ -126,19 +125,10 @@ test('Should add an id to newObject', function(t) {
   t.end();
 })
 
-// test('Should add an id to newObject', function(t) {
-//   var actual = logic.addTodo();
-//   var expected = 
-//   t.equal(actual, expected, 'Should add an id to the newObject');
-//   t.end();
-// })
+ test('Should add an id to newObject', function(t) {
+   var actual = logic.addTodo();
+   var expected = 
+   t.equal(actual, expected, 'Should add an id to the newObject');
+   t.end();
+ })
 
-/*{
-  id: 1,
-  descptrion: 'make tea',
-  done: false,
-};
-
-
-var actual = logic.addTodo(todos, newTodo).length;
-  var expected = todos.length + 1;*/
