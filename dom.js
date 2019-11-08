@@ -37,11 +37,11 @@
     var markTodoButtonNode = document.createElement("button");
     markTodoButtonNode.setAttribute("class", "mark-button");
     markTodoButtonNode.setAttribute("aria-label", "complete button");
-    if (todo.done == false) {
+    if (todo.done === false) {
       markTodoButtonNode.setAttribute("style", "background-color: #003366;");
       todoNode.setAttribute('style', 'opacity: 1;');
     }
-    if (todo.done == true) {
+    if (todo.done === true) {
       markTodoButtonNode.innerText = "✔";
       markTodoButtonNode.setAttribute("style", "background-color: green;");
       todoNode.setAttribute('style', 'opacity: 0.5;');
