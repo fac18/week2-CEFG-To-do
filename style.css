@@ -4,21 +4,21 @@
 
 body {
     background: url(https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
-    background-repeat: no-repeat;
     background-size: 100vw 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-size: 1.5rem;
 }
 
 .app {
     background-color: rgba(255, 255, 255, 0.3);
     border: whitesmoke solid 0.1rem;
-    position: absolute;
+    position: relative;
     top: 20vh;
+    margin: auto;
     padding: 0 5rem 2rem 5rem;
     border-radius: 0.5rem;
+    width: 50vw;
 }
 
 h1 {
@@ -29,13 +29,17 @@ h1 {
     color:rgba(128, 0, 0, 0.7);
 }
 
-#todo-container {
-    font-family: 'Satisfy', cursive;
-}
-
 #add-todo {
     display: flex;
     flex-direction: row;
+}
+
+@media (min-width: 768px) {
+    #add-todo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 #itemToAdd {
@@ -53,11 +57,23 @@ h1 {
     background-color: rgba(128, 0, 0, 0.3);
 }
 
+#todo-container {
+    font-family: 'Satisfy', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    margin-left: -2rem;
+}
+ 
 button {
     height: 1.4rem;
     width: 1.4rem;
     margin: 0.5em;
-    float: right;
     background-color: red;
 }
 
