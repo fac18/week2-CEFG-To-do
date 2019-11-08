@@ -26,6 +26,7 @@
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.innerText = "✘";
     deleteButtonNode.setAttribute("style", "color:white;");
+    deleteButtonNode.setAttribute("aria-label", "delete button");
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -35,6 +36,7 @@
     // add markTodo button
     var markTodoButtonNode = document.createElement("button");
     markTodoButtonNode.setAttribute("class", "mark-button");
+    markTodoButtonNode.setAttribute("aria-label", "complete button");
     if (todo.done == false) {
       markTodoButtonNode.setAttribute("style", "background-color: #003366;");
       todoNode.setAttribute('style', 'opacity: 1;');
