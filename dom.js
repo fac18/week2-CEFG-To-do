@@ -25,7 +25,7 @@
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.innerText = "✘";
-    deleteButtonNode.setAttribute("style", "background-color: red;");
+    deleteButtonNode.setAttribute("style", "color:white;");
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -51,17 +51,7 @@
       update(newState);
     });
     todoNode.appendChild(markTodoButtonNode);
-    // markButtonNode.addEventListener('click', function(event) {
-    //   var newState = todoFunctions.markTodo(state, todo.id);
-    //   update(newState);
-    //   if (todo.done == false) {
-    //     todoNode.classList.add("completed")
-    //   } else {
-    //     todoNode.classList.remove("completed")
-    //   }
-    // });
-    // todoNode.appendChild(markButtonNode);
-
+    
     // add classes for css
 
     return todoNode;
