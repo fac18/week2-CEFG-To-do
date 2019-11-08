@@ -25,7 +25,8 @@
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
     deleteButtonNode.innerText = "✘";
-    deleteButtonNode.setAttribute("style", "background-color: red;");
+    deleteButtonNode.setAttribute("style", "color:white;");
+    deleteButtonNode.setAttribute("aria-label", "delete button");
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
@@ -35,6 +36,7 @@
     // add markTodo button
     var markTodoButtonNode = document.createElement("button");
     markTodoButtonNode.setAttribute("class", "mark-button");
+    markTodoButtonNode.setAttribute("aria-label", "complete button");
     if (todo.done === false) {
       markTodoButtonNode.setAttribute("style", "background-color: #003366;");
       todoNode.setAttribute('style', 'opacity: 1;');
@@ -50,17 +52,7 @@
       update(newState);
     });
     todoNode.appendChild(markTodoButtonNode);
-    // markButtonNode.addEventListener('click', function(event) {
-    //   var newState = todoFunctions.markTodo(state, todo.id);
-    //   update(newState);
-    //   if (todo.done == false) {
-    //     todoNode.classList.add("completed")
-    //   } else {
-    //     todoNode.classList.remove("completed")
-    //   }
-    // });
-    // todoNode.appendChild(markButtonNode);
-
+    
     // add classes for css
 
     return todoNode;

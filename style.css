@@ -24,8 +24,6 @@ body {
 h1 {
     text-align: center;
     font-weight: bolder;
-    /*font-family: 'Satisfy', cursive;
-    */
     font-family: 'Abril Fatface', cursive;
     text-decoration: underline;
     color:rgba(128, 0, 0, 0.7);
@@ -38,7 +36,6 @@ h1 {
 #add-todo {
     display: flex;
     flex-direction: row;
-    /*border: black solid 3px;*/
 }
 
 #itemToAdd {
@@ -61,5 +58,6 @@ button {
     width: 1.4rem;
     margin: 0.5em;
     float: right;
+    background-color: red;
 }
 
