@@ -80,6 +80,7 @@
       // hint: todoFunctions.addTodo
       var newState = todoFunctions.addTodo(state, description); // ?? change this!
       update(newState);
+      document.getElementById("itemToAdd").value = "";
     });
   }
 
