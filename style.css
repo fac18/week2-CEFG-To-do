@@ -29,6 +29,13 @@ h1 {
     color:rgba(128, 0, 0, 0.7);
 }
 
+<<<<<<< HEAD
+=======
+#todo-container, input {
+    font-family: 'Satisfy', cursive;
+}
+
+>>>>>>> master
 #add-todo {
     display: flex;
     flex-direction: row;
@@ -74,6 +81,11 @@ button {
     height: 1.4rem;
     width: 1.4rem;
     margin: 0.5em;
+<<<<<<< HEAD
     background-color: red;
+=======
+    float: right;
+    background-color: #CD5C5C;
+>>>>>>> master
 }
 
