@@ -42,7 +42,7 @@
       markTodoButtonNode.setAttribute("style", "background-color: grey; color:white;");
       todoNode.setAttribute('style', 'opacity: 1;');
     }
-    if (todo.done == true) {
+    if (todo.done === true) {
       markTodoButtonNode.innerText = "✔";
       markTodoButtonNode.setAttribute("style", "background-color: #3CB371;");
       todoNode.setAttribute('style', 'opacity: 0.5;');

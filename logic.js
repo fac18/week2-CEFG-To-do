@@ -49,11 +49,11 @@ var todoFunctions = {
   markTodo: function(todos, idToMark) {
     var newTodos = todoFunctions.cloneArrayOfObjects(todos);
     for (let item of newTodos) {
-      if (item.id == idToMark) {
+      if (item.id === idToMark) {
         item.done ? (item.done = false) : (item.done = true);
+        return newTodos;
       }
     }
-    return newTodos;
   },
 
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
