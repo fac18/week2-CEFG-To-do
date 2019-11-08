@@ -37,7 +37,7 @@
     markTodoButtonNode.setAttribute("class", "mark-button");
     if (todo.done == false) {
       markTodoButtonNode.innerText = "✔";
-      markTodoButtonNode.setAttribute("style", "background-color: white;");
+      markTodoButtonNode.setAttribute("style", "background-color: grey; color:white;");
       todoNode.setAttribute('style', 'opacity: 1;');
     }
     if (todo.done == true) {
