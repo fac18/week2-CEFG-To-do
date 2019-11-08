@@ -36,6 +36,7 @@
     var markTodoButtonNode = document.createElement("button");
     markTodoButtonNode.setAttribute("class", "mark-button");
     if (todo.done == false) {
+      markTodoButtonNode.innerText = "✔";
       markTodoButtonNode.setAttribute("style", "background-color: #003366;");
       todoNode.setAttribute('style', 'opacity: 1;');
     }
